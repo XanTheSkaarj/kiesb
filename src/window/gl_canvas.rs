@@ -163,6 +163,10 @@ impl AbstractCanvas for GLCanvas {
         self.window.set_title(title)
     }
 
+    fn set_fullscreen(&mut self) {
+	self.window.set_fullscreen(Some(self.window.get_current_monitor()));
+    }
+
     fn hide(&mut self) {
         self.window.hide()
     }
