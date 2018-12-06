@@ -90,6 +90,10 @@ impl Window {
         })
     }
 
+    pub fn set_fullscreen(&mut self) {
+	self.canvas.set_fullscreen();
+    }
+
     /// Set window title
     pub fn set_title(&mut self, title: &str) {
         self.canvas.set_title(title)
